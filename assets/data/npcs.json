@@ -4,38 +4,31 @@
     "animationKeyPrefix": "NPC_1",
     "events": [
       {
-        "requires": ["LOOKING_FOR_PROFESSOR"],
+        "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["隔壁的博士在找你。"]
+          "messages": ["你的怪兽需要休息。过来。"]
         }
       },
       {
-        "requires": ["FOUND_PROFESSOR"],
-        "type": "MESSAGE",
-        "data": {
-          "messages": ["你应该休息一下。"]
-        }
-      },
-      {
-        "requires": ["FOUND_PROFESSOR"],
+        "requires": [],
         "type": "HEAL",
         "data": {}
       },
       {
-        "requires": ["FOUND_PROFESSOR"],
+        "requires": [],
         "type": "SCENE_FADE_IN_AND_OUT",
         "data": {
-          "fadeInDuration": 1000,
-          "fadeOutDuration": 1000,
-          "waitDuration": 1000
+          "fadeInDuration": 800,
+          "fadeOutDuration": 800,
+          "waitDuration": 600
         }
       },
       {
-        "requires": ["FOUND_PROFESSOR"],
+        "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["太好了！你和你的怪兽们看起来精神饱满！"]
+          "messages": ["好了。别死在外面。"]
         }
       }
     ]
@@ -45,17 +38,10 @@
     "animationKeyPrefix": "NPC_3",
     "events": [
       {
-        "requires": ["LOOKING_FOR_PROFESSOR"],
+        "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["我上次看到博士往城外走了。"]
-        }
-      },
-      {
-        "requires": ["FOUND_PROFESSOR"],
-        "type": "MESSAGE",
-        "data": {
-          "messages": ["记得看路牌上的提示哦！"]
+          "messages": ["第七区外围的信号越来越乱了。小心。"]
         }
       }
     ]
@@ -68,7 +54,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["你可以从菜单中保存游戏。", "按 ENTER 键打开菜单。"]
+          "messages": ["ENTER 打开终端。记住了。"]
         }
       }
     ]
@@ -81,7 +67,7 @@
         "requires": ["TRAINER_NOT_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["嘿！来对战吧！"]
+          "messages": ["你。对战。现在。"]
         }
       },
       {
@@ -90,15 +76,15 @@
         "data": {
           "monsters": [7],
           "assetKey": "TRAINER_YOUTH_GIRL",
-          "trainerName": "见习训练师",
-          "trainerLostMessages": ["你打败我了！"]
+          "trainerName": "巡逻员",
+          "trainerLostMessages": ["...不错。通过。"]
         }
       },
       {
         "requires": ["TRAINER_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["那是一场精彩的对战！"]
+          "messages": ["别浪费时间在这里。"]
         }
       }
     ]
@@ -111,7 +97,7 @@
         "requires": ["TRAINER_NOT_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["嘿！来对战吧！"]
+          "messages": ["想通过？先打赢我。"]
         }
       },
       {
@@ -120,15 +106,15 @@
         "data": {
           "monsters": [6],
           "assetKey": "TRAINER_YOUTH_BOY",
-          "trainerName": "见习训练师",
-          "trainerLostMessages": ["你真是个强大的训练师！"]
+          "trainerName": "哨兵",
+          "trainerLostMessages": ["行。你可以走了。"]
         }
       },
       {
         "requires": ["TRAINER_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["我得变得更强才行。"]
+          "messages": ["下次见面我不会输。"]
         }
       }
     ]
@@ -141,7 +127,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["记得多囤一些道具哦。"]
+          "messages": ["补给站快关门了。需要什么赶紧拿。"]
         }
       }
     ]
@@ -154,7 +140,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["我劝你别去那片阴森的森林。"]
+          "messages": ["那片森林的信号完全是黑的。去了就别指望通讯。"]
         }
       }
     ]
@@ -167,7 +153,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["出发前记得先治疗你的队伍！"]
+          "messages": ["出去之前把队伍修一修。外面不等人。"]
         }
       }
     ]
@@ -180,7 +166,7 @@
         "requires": ["TRAINER_NOT_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["嘿！来对战吧！"]
+          "messages": ["又一个？来吧。"]
         }
       },
       {
@@ -189,15 +175,15 @@
         "data": {
           "monsters": [6, 7],
           "assetKey": "TRAINER_YOUTH_BOY",
-          "trainerName": "见习训练师",
-          "trainerLostMessages": ["我还需要继续修炼。"]
+          "trainerName": "守卫",
+          "trainerLostMessages": ["......记住这条路。"]
         }
       },
       {
         "requires": ["TRAINER_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["下次再战之前我得好好训练！"]
+          "messages": ["你比上次来的那个强。"]
         }
       }
     ]
@@ -210,7 +196,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["请在这里休息吧。"]
+          "messages": ["躺下。"]
         }
       },
       {
@@ -222,16 +208,16 @@
         "requires": [],
         "type": "SCENE_FADE_IN_AND_OUT",
         "data": {
-          "fadeInDuration": 1000,
-          "fadeOutDuration": 1000,
-          "waitDuration": 1000
+          "fadeInDuration": 800,
+          "fadeOutDuration": 800,
+          "waitDuration": 600
         }
       },
       {
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["太好了！你和你的怪兽们看起来精神饱满！"]
+          "messages": ["可以走了。"]
         }
       }
     ]

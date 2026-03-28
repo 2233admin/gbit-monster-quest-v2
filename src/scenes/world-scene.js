@@ -303,8 +303,8 @@ export class WorldScene extends BaseScene {
         if (this.#sceneData.isPlayerKnockedOut) {
           this.#healPlayerParty();
           this.#dialogUi.showDialogModal([
-            '看来你的队伍经历了一场恶战...',
-            '我已经帮你把它们治好了。',
+            '......信号恢复。生命体征：稳定。',
+            '你的队伍已修复完毕。出发吧。',
           ]);
         }
       }
