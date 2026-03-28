@@ -113,6 +113,13 @@ export class PreloadScene extends BaseScene {
     this.load.image(MONSTER_ASSET_KEYS.FROSTSABER, `${monsterTamerAssetPath}/monsters/frostsaber.png`);
     this.load.image(MONSTER_ASSET_KEYS.IGNIVOLT, `${monsterTamerAssetPath}/monsters/ignivolt.png`);
 
+    // gbit monster sprites (monster_1 to monster_56, front and back)
+    const monsterSpritePath = 'assets/images/monsters/sprites';
+    for (let i = 1; i <= 56; i++) {
+      this.load.image(`MONSTER_${i}_FRONT`, `${monsterSpritePath}/monster_${i}_front.png`);
+      this.load.image(`MONSTER_${i}_BACK`, `${monsterSpritePath}/monster_${i}_back.png`);
+    }
+
     // ui assets
     this.load.image(UI_ASSET_KEYS.CURSOR, `${monsterTamerAssetPath}/ui/cursor.png`);
     this.load.image(UI_ASSET_KEYS.CURSOR_WHITE, `${monsterTamerAssetPath}/ui/cursor_white.png`);
