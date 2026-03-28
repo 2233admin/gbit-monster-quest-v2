@@ -193,7 +193,7 @@ export class OptionsScene extends BaseScene {
     this.#optionsMenuCursor = this.add
       .rectangle(110, 70, optionMenuWidth - 20, 40, 0xffffff, 0)
       .setOrigin(0)
-      .setStrokeStyle(4, 0xe4434a, 1);
+      .setStrokeStyle(4, 0x4a9ec5, 1);
 
     this.#updateTextSpeedGameObjects();
     this.#updateBattleSceneOptionGameObjects();

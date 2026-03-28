@@ -15,6 +15,7 @@ import { SCENE_KEYS } from './scene-keys.js';
 import { ITEM_EFFECT } from '../types/typedef.js';
 import { MONSTER_PARTY_MENU_OPTIONS, MonsterPartyMenu } from '../party/monster-party-menu.js';
 import { CONFIRMATION_MENU_OPTIONS, ConfirmationMenu } from '../common/menu/confirmation-menu.js';
+import { BATTLE_THEME, drawPanel } from '../utils/ui-theme.js';
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const UI_TEXT_STYLE = {
@@ -125,13 +126,15 @@ export class MonsterPartyScene extends BaseScene {
 
     // create info container
     const infoContainer = this.add.container(4, this.scale.height - 69, []);
-    const infoDisplay = this.add.rectangle(0, 0, 867, 65, 0xede4f3, 1).setOrigin(0).setStrokeStyle(8, 0x905ac2, 1);
+    const infoDisplayGraphics = this.add.graphics();
+    drawPanel(infoDisplayGraphics, 0, 0, 867, 65, BATTLE_THEME.menuPanel, { radius: 10 });
     this.#infoTextGameObject = this.add.text(15, 14, '', {
       fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
-      color: '#000000',
+      color: '#e8e4f0',
       fontSize: '32px',
+      shadow: { offsetX: 1, offsetY: 1, color: '#000000', blur: 2, fill: true },
     });
-    infoContainer.add([infoDisplay, this.#infoTextGameObject]);
+    infoContainer.add([infoDisplayGraphics, this.#infoTextGameObject]);
     this.#updateInfoContainerText();
 
     // create monsters in party

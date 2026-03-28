@@ -7,6 +7,7 @@ import { DATA_MANAGER_STORE_KEYS, dataManager } from '../utils/data-manager.js';
 import { UI_ASSET_KEYS } from '../assets/asset-keys.js';
 import { MENU_COLOR } from '../config.js';
 import { exhaustiveGuard } from '../utils/guard.js';
+import { UI_THEME, drawPanel } from '../utils/ui-theme.js';
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const UI_TEXT_STYLE = Object.freeze({
@@ -70,12 +71,14 @@ export class DialogScene extends BaseScene {
     this.#messagesToShow = [];
     this.cameras.main.setZoom(0.8);
 
-    const menuColor = this.#getMenuColorsFromDataManager();
-    const panel = this.add
-      .rectangle(0, 0, this.#width, this.#height, menuColor.main, 0.9)
-      .setOrigin(0)
-      .setStrokeStyle(8, menuColor.border, 1);
-    this.#container = this.add.container(0, 0, [panel]);
+    const theme = this.#getThemeColors();
+    const panelGraphics = this.add.graphics();
+    drawPanel(panelGraphics, 0, 0, this.#width, this.#height, {
+      fill: theme.main,
+      border: theme.border,
+      shadow: theme.shadow,
+    });
+    this.#container = this.add.container(0, 0, [panelGraphics]);
     this.#uiText = this.add.text(18, 12, '', {
       ...UI_TEXT_STYLE,
       ...{ wordWrap: { width: this.#width - 18 } },
@@ -99,8 +102,17 @@ export class DialogScene extends BaseScene {
 
     this.#container.setPosition(startX, startY);
     this.#userInputCursorTween.restart();
-    this.#container.setAlpha(1);
     this.#isVisible = true;
+
+    // slide-up + fade-in
+    this.#container.setAlpha(0);
+    this.tweens.add({
+      targets: this.#container,
+      alpha: 1,
+      y: { from: startY + 20, to: startY },
+      duration: 150,
+      ease: 'Power2',
+    });
 
     this.showNextMessage();
   }
@@ -156,22 +168,22 @@ export class DialogScene extends BaseScene {
   }
 
   /**
-   * @returns {{ main: number; border: number}}
+   * @returns {{ main: number; border: number; shadow: number }}
    */
-  #getMenuColorsFromDataManager() {
+  #getThemeColors() {
     /** @type {import('../common/options.js').MenuColorOptions} */
     const chosenMenuColor = dataManager.store.get(DATA_MANAGER_STORE_KEYS.OPTIONS_MENU_COLOR);
     if (chosenMenuColor === undefined) {
-      return MENU_COLOR[1];
+      return UI_THEME[1];
     }
 
     switch (chosenMenuColor) {
       case 0:
-        return MENU_COLOR[1];
+        return UI_THEME[1];
       case 1:
-        return MENU_COLOR[2];
+        return UI_THEME[2];
       case 2:
-        return MENU_COLOR[3];
+        return UI_THEME[3];
       default:
         exhaustiveGuard(chosenMenuColor);
     }

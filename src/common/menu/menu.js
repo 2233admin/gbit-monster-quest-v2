@@ -5,6 +5,7 @@ import { DIRECTION } from '../../common/direction.js';
 import { DATA_MANAGER_STORE_KEYS, dataManager } from '../../utils/data-manager.js';
 import { exhaustiveGuard } from '../../utils/guard.js';
 import { MENU_COLOR } from './menu-config.js';
+import { UI_THEME, drawPanel, slideIn, createCursorPulse } from '../../utils/ui-theme.js';
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const MENU_TEXT_STYLE = {
@@ -38,6 +39,8 @@ export class Menu {
   #selectedMenuOption;
   /** @type {Phaser.GameObjects.Image} */
   #userInputCursor;
+  /** @type {Phaser.Tweens.Tween | undefined} */
+  #cursorPulseTween;
 
   /**
    * @param {Phaser.Scene} scene
@@ -88,12 +91,24 @@ export class Menu {
    */
   show() {
     const { right, top } = this.#scene.cameras.main.worldView;
-    const startX = right - this.#padding * 2 - this.#width;
-    const startY = top + this.#padding * 2;
+    const toX = right - this.#padding * 2 - this.#width;
+    const toY = top + this.#padding * 2;
 
-    this.#container.setPosition(startX, startY);
-    this.#container.setAlpha(1);
+    slideIn(this.#scene, this.#container, {
+      fromX: toX + 30,
+      fromY: toY - 20,
+      toX,
+      toY,
+      duration: 180,
+    });
     this.#isVisible = true;
+
+    // cursor pulse
+    if (this.#cursorPulseTween) {
+      this.#cursorPulseTween.resume();
+    } else {
+      this.#cursorPulseTween = createCursorPulse(this.#scene, this.#userInputCursor);
+    }
   }
 
   /**
@@ -104,6 +119,9 @@ export class Menu {
     this.#selectedMenuOptionIndex = 0;
     this.#moveMenuCursor(DIRECTION.NONE);
     this.#isVisible = false;
+    if (this.#cursorPulseTween) {
+      this.#cursorPulseTween.pause();
+    }
   }
 
   /**
@@ -130,13 +148,13 @@ export class Menu {
    */
   #createGraphics() {
     const g = this.#scene.add.graphics();
-    const menuColor = this.#getMenuColorsFromDataManager();
+    const theme = this.#getThemeColors();
 
-    g.fillStyle(menuColor.main, 1);
-    g.fillRect(1, 0, this.#width - 1, this.#height - 1);
-    g.lineStyle(8, menuColor.border, 1);
-    g.strokeRect(0, 0, this.#width, this.#height);
-    g.setAlpha(0.9);
+    drawPanel(g, 0, 0, this.#width, this.#height, {
+      fill: theme.main,
+      border: theme.border,
+      shadow: theme.shadow,
+    });
 
     return g;
   }
@@ -181,22 +199,22 @@ export class Menu {
   }
 
   /**
-   * @returns {{ main: number; border: number; }}
+   * @returns {{ main: number; border: number; shadow: number }}
    */
-  #getMenuColorsFromDataManager() {
+  #getThemeColors() {
     /** @type {import('../../common/options.js').MenuColorOptions} */
     const chosenMenuColor = dataManager.store.get(DATA_MANAGER_STORE_KEYS.OPTIONS_MENU_COLOR);
     if (chosenMenuColor === undefined) {
-      return MENU_COLOR[1];
+      return UI_THEME[1];
     }
 
     switch (chosenMenuColor) {
       case 0:
-        return MENU_COLOR[1];
+        return UI_THEME[1];
       case 1:
-        return MENU_COLOR[2];
+        return UI_THEME[2];
       case 2:
-        return MENU_COLOR[3];
+        return UI_THEME[3];
       default:
         exhaustiveGuard(chosenMenuColor);
     }

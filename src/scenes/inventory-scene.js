@@ -21,8 +21,9 @@ const INVENTORY_ITEM_POSITION = Object.freeze({
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const INVENTORY_TEXT_STYLE = {
   fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
-  color: '#000000',
+  color: '#e8e4f0',
   fontSize: '30px',
+  shadow: { offsetX: 1, offsetY: 1, color: '#000000', blur: 2, fill: true },
 };
 
 /**
@@ -122,13 +123,13 @@ export class InventoryScene extends BaseScene {
     const container = this.#nineSliceMainContainer
       .createNineSliceContainer(this, 700, 360, UI_ASSET_KEYS.MENU_BACKGROUND)
       .setPosition(300, 20);
-    const containerBackground = this.add.rectangle(4, 4, 692, 352, 0xffff88).setOrigin(0).setAlpha(0.6);
+    const containerBackground = this.add.rectangle(4, 4, 692, 352, 0x1a2a3a).setOrigin(0).setAlpha(0.85);
     container.add(containerBackground);
 
     const titleContainer = this.#nineSliceMainContainer
       .createNineSliceContainer(this, 240, 64, UI_ASSET_KEYS.MENU_BACKGROUND)
       .setPosition(64, 20);
-    const titleContainerBackground = this.add.rectangle(4, 4, 232, 56, 0xffff88).setOrigin(0).setAlpha(0.6);
+    const titleContainerBackground = this.add.rectangle(4, 4, 232, 56, 0x1a2a3a).setOrigin(0).setAlpha(0.85);
     titleContainer.add(titleContainerBackground);
 
     const textTitle = this.add.text(116, 28, 'Items', INVENTORY_TEXT_STYLE).setOrigin(0.5);
@@ -143,7 +144,7 @@ export class InventoryScene extends BaseScene {
         INVENTORY_TEXT_STYLE
       );
       const qty1Text = this.add.text(620, INVENTORY_ITEM_POSITION.y + 2 + index * INVENTORY_ITEM_POSITION.space, 'x', {
-        color: '#000000',
+        color: '#e8e4f0',
         fontSize: '30px',
       });
       const qty2Text = this.add.text(

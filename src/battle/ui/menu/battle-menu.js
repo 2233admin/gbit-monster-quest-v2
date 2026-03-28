@@ -9,6 +9,7 @@ import { animateText } from '../../../utils/text-utils.js';
 import { dataManager } from '../../../utils/data-manager.js';
 import { SCENE_KEYS } from '../../../scenes/scene-keys.js';
 import { ITEM_CATEGORY } from '../../../types/typedef.js';
+import { BATTLE_THEME, drawPanel } from '../../../utils/ui-theme.js';
 
 const BATTLE_MENU_CURSOR_POS = Object.freeze({
   x: 42,
@@ -423,31 +424,20 @@ export class BattleMenu {
   #createMainInfoPane() {
     const padding = 4;
     const rectHeight = 124;
-
-    this.#scene.add
-      .rectangle(
-        padding,
-        this.#scene.scale.height - rectHeight - padding,
-        this.#scene.scale.width - padding * 2,
-        rectHeight,
-        0xede4f3,
-        1
-      )
-      .setOrigin(0)
-      .setStrokeStyle(8, 0xe4434a, 1);
+    const g = this.#scene.add.graphics();
+    drawPanel(g, padding, this.#scene.scale.height - rectHeight - padding,
+      this.#scene.scale.width - padding * 2, rectHeight, BATTLE_THEME.infoPanel, { radius: 10 });
   }
 
   /**
-   * @returns {Phaser.GameObjects.Rectangle}
+   * @returns {Phaser.GameObjects.Graphics}
    */
   #createMainInfoSubPane() {
     const rectWidth = 500;
     const rectHeight = 124;
-
-    return this.#scene.add
-      .rectangle(0, 0, rectWidth, rectHeight, 0xede4f3, 1)
-      .setOrigin(0)
-      .setStrokeStyle(8, 0x905ac2, 1);
+    const g = this.#scene.add.graphics();
+    drawPanel(g, 0, 0, rectWidth, rectHeight, BATTLE_THEME.menuPanel, { radius: 10 });
+    return g;
   }
 
   /**
