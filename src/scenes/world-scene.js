@@ -303,8 +303,8 @@ export class WorldScene extends BaseScene {
         if (this.#sceneData.isPlayerKnockedOut) {
           this.#healPlayerParty();
           this.#dialogUi.showDialogModal([
-            'It looks like your team put up quite a fight...',
-            'I went ahead and healed them up for you.',
+            '看来你的队伍经历了一场恶战...',
+            '我已经帮你把它们治好了。',
           ]);
         }
       }
@@ -380,7 +380,7 @@ export class WorldScene extends BaseScene {
         if (this.#menu.selectedMenuOption === 'SAVE') {
           this.#menu.hide();
           dataManager.saveData();
-          this.#dialogUi.showDialogModal(['Game progress has been saved']);
+          this.#dialogUi.showDialogModal(['游戏进度已保存']);
         }
 
         if (this.#menu.selectedMenuOption === 'MONSTERS') {

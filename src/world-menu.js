@@ -19,6 +19,7 @@ export class WorldMenu extends Menu {
    * @param {Phaser.Scene} scene
    */
   constructor(scene) {
-    super(scene, [MENU_OPTIONS.MONSTERS, MENU_OPTIONS.BAG, MENU_OPTIONS.SAVE, MENU_OPTIONS.EXIT]);
+    super(scene, [MENU_OPTIONS.MONSTERS, MENU_OPTIONS.BAG, MENU_OPTIONS.SAVE, MENU_OPTIONS.EXIT],
+      ['怪兽', '背包', '保存', '退出']);
   }
 }
