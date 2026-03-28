@@ -10,5 +10,299 @@
     "name": "slash",
     "animationName": "SLASH",
     "audioKey": "CLAW"
+  },
+  {
+    "id": 3,
+    "name": "quick_strike",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 4,
+    "name": "leaf_blade",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 5,
+    "name": "thorn_whip",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 6,
+    "name": "ember_burst",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 7,
+    "name": "flame_dash",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 8,
+    "name": "water_jet",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 9,
+    "name": "tidal_arc",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 10,
+    "name": "bug_bite",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 11,
+    "name": "spore_dust",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 12,
+    "name": "spark_hit",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 13,
+    "name": "static_bolt",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 14,
+    "name": "stone_crash",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 15,
+    "name": "horn_rush",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 16,
+    "name": "solar_slice",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 17,
+    "name": "inferno_pounce",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 18,
+    "name": "hydro_press",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 19,
+    "name": "swarm_drive",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 20,
+    "name": "volt_lance",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 21,
+    "name": "shell_breaker",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 22,
+    "name": "mud_spike",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 23,
+    "name": "aqua_lance",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 24,
+    "name": "vine_guard",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 25,
+    "name": "magma_surge",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 26,
+    "name": "thunder_current",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 27,
+    "name": "relic_roar",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 28,
+    "name": "aurora_tide",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 29,
+    "name": "celestial_bloom",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 30,
+    "name": "toxic_spores",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 31,
+    "name": "flame_focus",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 32,
+    "name": "aqua_shield",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 33,
+    "name": "mind_shock",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 34,
+    "name": "fairy_pulse",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 35,
+    "name": "moon_barrier",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 36,
+    "name": "prism_lance",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 37,
+    "name": "starlight_waltz",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 38,
+    "name": "lava_claw",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 39,
+    "name": "inferno_halberd",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 40,
+    "name": "verdant_inferno",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 41,
+    "name": "frost_arc",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 42,
+    "name": "ember_howl",
+    "animationName": "FLAME",
+    "audioKey": "FLAME"
+  },
+  {
+    "id": 43,
+    "name": "glacial_veil",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 44,
+    "name": "vine_whip",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 45,
+    "name": "absorb",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 46,
+    "name": "mega_drain",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 47,
+    "name": "leech_seed",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 48,
+    "name": "sleep_powder",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 49,
+    "name": "stun_spore",
+    "animationName": "SLASH",
+    "audioKey": "CLAW"
+  },
+  {
+    "id": 50,
+    "name": "frost_peck",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
+  },
+  {
+    "id": 51,
+    "name": "blizzard_burst",
+    "animationName": "ICE_SHARD",
+    "audioKey": "ICE"
   }
 ]
