@@ -7,14 +7,14 @@
         "requires": ["LOOKING_FOR_PROFESSOR"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["The professor next door was looking for you."]
+          "messages": ["隔壁的博士在找你。"]
         }
       },
       {
         "requires": ["FOUND_PROFESSOR"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["You should take a quick rest."]
+          "messages": ["你应该休息一下。"]
         }
       },
       {
@@ -35,7 +35,7 @@
         "requires": ["FOUND_PROFESSOR"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["Oh good! You and your monsters are looking great!"]
+          "messages": ["太好了！你和你的怪兽们看起来精神饱满！"]
         }
       }
     ]
@@ -48,14 +48,14 @@
         "requires": ["LOOKING_FOR_PROFESSOR"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["I last saw the professor heading out of town."]
+          "messages": ["我上次看到博士往城外走了。"]
         }
       },
       {
         "requires": ["FOUND_PROFESSOR"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["Make sure you read the signposts for helpful tips!"]
+          "messages": ["记得看路牌上的提示哦！"]
         }
       }
     ]
@@ -68,7 +68,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["You can save your game from the menu.", "To open the menu, press the ENTER key."]
+          "messages": ["你可以从菜单中保存游戏。", "按 ENTER 键打开菜单。"]
         }
       }
     ]
@@ -81,7 +81,7 @@
         "requires": ["TRAINER_NOT_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["Hey! Let's battle!"]
+          "messages": ["嘿！来对战吧！"]
         }
       },
       {
@@ -90,15 +90,15 @@
         "data": {
           "monsters": [7],
           "assetKey": "TRAINER_YOUTH_GIRL",
-          "trainerName": "Jr. Trainer",
-          "trainerLostMessages": ["You defeated me!"]
+          "trainerName": "见习训练师",
+          "trainerLostMessages": ["你打败我了！"]
         }
       },
       {
         "requires": ["TRAINER_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["That was great battle!"]
+          "messages": ["那是一场精彩的对战！"]
         }
       }
     ]
@@ -111,7 +111,7 @@
         "requires": ["TRAINER_NOT_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["Hey! Let's battle!"]
+          "messages": ["嘿！来对战吧！"]
         }
       },
       {
@@ -120,15 +120,15 @@
         "data": {
           "monsters": [6],
           "assetKey": "TRAINER_YOUTH_BOY",
-          "trainerName": "Jr. Trainer",
-          "trainerLostMessages": ["You are a strong trainer!"]
+          "trainerName": "见习训练师",
+          "trainerLostMessages": ["你真是个强大的训练师！"]
         }
       },
       {
         "requires": ["TRAINER_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["I'll have to get stronger."]
+          "messages": ["我得变得更强才行。"]
         }
       }
     ]
@@ -141,7 +141,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["You should make sure to stock up on items."]
+          "messages": ["记得多囤一些道具哦。"]
         }
       }
     ]
@@ -154,7 +154,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["I would stay out of the spooky forest."]
+          "messages": ["我劝你别去那片阴森的森林。"]
         }
       }
     ]
@@ -167,7 +167,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["Make sure you heal your team before you head out!"]
+          "messages": ["出发前记得先治疗你的队伍！"]
         }
       }
     ]
@@ -180,7 +180,7 @@
         "requires": ["TRAINER_NOT_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["Hey! Let's battle!"]
+          "messages": ["嘿！来对战吧！"]
         }
       },
       {
@@ -189,15 +189,15 @@
         "data": {
           "monsters": [6, 7],
           "assetKey": "TRAINER_YOUTH_BOY",
-          "trainerName": "Jr. Trainer",
-          "trainerLostMessages": ["I'll need to keep practicing."]
+          "trainerName": "见习训练师",
+          "trainerLostMessages": ["我还需要继续修炼。"]
         }
       },
       {
         "requires": ["TRAINER_DEFEATED"],
         "type": "MESSAGE",
         "data": {
-          "messages": ["I'll need to train before we battle again!"]
+          "messages": ["下次再战之前我得好好训练！"]
         }
       }
     ]
@@ -210,7 +210,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["Feel free to rest here."]
+          "messages": ["请在这里休息吧。"]
         }
       },
       {
@@ -231,7 +231,7 @@
         "requires": [],
         "type": "MESSAGE",
         "data": {
-          "messages": ["Oh good! You and your monsters are looking great!"]
+          "messages": ["太好了！你和你的怪兽们看起来精神饱满！"]
         }
       }
     ]

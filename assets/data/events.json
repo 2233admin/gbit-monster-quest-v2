@@ -24,9 +24,9 @@
         "data": {
           "id": 1001,
           "messages": [
-            "I know all kids must leave home one day...",
-            "Right! I must be strong.",
-            "The professor next door was looking for you."
+            "我知道所有的孩子终有一天要离开家...",
+            "没错！我必须坚强起来。",
+            "隔壁的博士在找你。"
           ]
         }
       },
@@ -76,9 +76,9 @@
         "data": {
           "id": 1002,
           "messages": [
-            "Wait right there!",
-            "Going into the wild grass is dangerous without your own partner.",
-            "Please take this Iguanignite..."
+            "等一下！",
+            "没有自己的伙伴就去野外草丛太危险了。",
+            "请收下这只焰蜥..."
           ]
         }
       },
