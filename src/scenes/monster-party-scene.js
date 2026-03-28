@@ -130,7 +130,7 @@ export class MonsterPartyScene extends BaseScene {
     drawPanel(infoDisplayGraphics, 0, 0, 867, 65, BATTLE_THEME.menuPanel, { radius: 10 });
     this.#infoTextGameObject = this.add.text(15, 14, '', {
       fontFamily: FUSION_PIXEL_FONT_NAME,
-      color: '#e8e4f0',
+      color: '#e0dcd0',
       fontSize: '36px',
       shadow: { offsetX: 1, offsetY: 1, color: '#000000', blur: 2, fill: true },
     });

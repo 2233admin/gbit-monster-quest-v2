@@ -22,6 +22,8 @@ import { sleep } from '../utils/time-utils.js';
 import { generateUuid } from '../utils/random.js';
 import { calculateMonsterCaptureResults } from '../utils/catch-utils.js';
 import { EnemyBattleNpc } from '../battle/enemy-battle-npc.js';
+import { showDamageNumber, cameraShake } from '../utils/ui-theme.js';
+import { getEffectiveness, rollCritical, CRIT_MULTIPLIER } from '../battle/type-effectiveness.js';
 
 const BATTLE_STATES = Object.freeze({
   INTRO: 'INTRO',
@@ -311,7 +313,24 @@ export class BattleScene extends BaseScene {
             ATTACK_TARGET.ENEMY,
             () => {
               this.#activeEnemyMonster.playTakeDamageAnimation(() => {
-                this.#activeEnemyMonster.takeDamage(this.#activePlayerMonster.baseAttack, () => {
+                // Resolve attack type from GBIT attack data (id >= 100) or base data
+                const playerAttackId =
+                  this.#activePlayerMonster.monsterDetails.attackIds[this.#activePlayerAttackIndex];
+                const playerAttackData = DataUtils.getAttack(this, playerAttackId);
+                const attackType = playerAttackData?.gbit_type ?? 'normal';
+                const defenderType = this.#activeEnemyMonster.monsterDetails.gbit_type ?? 'normal';
+
+                const effectiveness = getEffectiveness(attackType, defenderType);
+                const isCritical = rollCritical();
+                const rawDamage = this.#activePlayerMonster.baseAttack;
+                const finalDamage = Math.max(
+                  1,
+                  Math.floor(rawDamage * effectiveness * (isCritical ? CRIT_MULTIPLIER : 1))
+                );
+
+                showDamageNumber(this, 768, 144, finalDamage);
+                cameraShake(this, 0.008, 120);
+                this.#activeEnemyMonster.takeDamage(finalDamage, () => {
                   callback();
                 });
               });
@@ -348,7 +367,24 @@ export class BattleScene extends BaseScene {
             ATTACK_TARGET.PLAYER,
             () => {
               this.#activePlayerMonster.playTakeDamageAnimation(() => {
-                this.#activePlayerMonster.takeDamage(this.#activeEnemyMonster.baseAttack, () => {
+                // Resolve attack type from GBIT attack data (id >= 100) or base data
+                const enemyAttackId =
+                  this.#activeEnemyMonster.monsterDetails.attackIds[this.#activeEnemyAttackIndex];
+                const enemyAttackData = DataUtils.getAttack(this, enemyAttackId);
+                const attackType = enemyAttackData?.gbit_type ?? 'normal';
+                const defenderType = this.#activePlayerMonster.monsterDetails.gbit_type ?? 'normal';
+
+                const effectiveness = getEffectiveness(attackType, defenderType);
+                const isCritical = rollCritical();
+                const rawDamage = this.#activeEnemyMonster.baseAttack;
+                const finalDamage = Math.max(
+                  1,
+                  Math.floor(rawDamage * effectiveness * (isCritical ? CRIT_MULTIPLIER : 1))
+                );
+
+                showDamageNumber(this, 256, 316, finalDamage);
+                cameraShake(this, 0.008, 120);
+                this.#activePlayerMonster.takeDamage(finalDamage, () => {
                   callback();
                 });
               });

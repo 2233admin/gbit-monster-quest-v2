@@ -1,14 +1,14 @@
 export const MENU_COLOR = Object.freeze({
   1: {
-    main: 0x1a2a3a,
-    border: 0x4a9ec5,
+    main: 0x121218,
+    border: 0xc02030,
   },
   2: {
-    main: 0x1a2e1f,
-    border: 0x4ab86a,
+    main: 0x101814,
+    border: 0xc02030,
   },
   3: {
-    main: 0x251a3a,
-    border: 0x8b5ec5,
+    main: 0x14101c,
+    border: 0xc02030,
   },
 });

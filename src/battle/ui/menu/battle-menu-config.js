@@ -4,7 +4,7 @@ import Phaser from '../../../lib/phaser.js';
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 export const BATTLE_UI_TEXT_STYLE = Object.freeze({
   fontFamily: FUSION_PIXEL_FONT_NAME,
-  color: '#e8e4f0',
+  color: '#e0dcd0',
   fontSize: '36px',
   shadow: {
     offsetX: 1,

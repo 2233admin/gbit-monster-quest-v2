@@ -95,6 +95,14 @@ export class BattleMonster {
   }
 
   /**
+   * Exposes the raw monster data object for extended field access (e.g. gbit_type).
+   * @type {import('../../types/typedef.js').Monster}
+   */
+  get monsterDetails() {
+    return this._monsterDetails;
+  }
+
+  /**
    * @param {import('../../types/typedef.js').Monster} monster
    * @returns {void}
    */
