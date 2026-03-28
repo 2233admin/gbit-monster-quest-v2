@@ -2,7 +2,7 @@
   {
     "id": "1",
     "monsterId": 1,
-    "name": "iguanignite",
+    "name": "焰蜥",
     "assetKey": "IGUANIGNITE",
     "assetFrame": 0,
     "currentHp": 25,
@@ -17,7 +17,7 @@
   {
     "id": "2",
     "monsterId": 2,
-    "name": "carnodusk",
+    "name": "暮牙兽",
     "assetKey": "CARNODUSK",
     "assetFrame": 0,
     "currentHp": 25,
@@ -32,7 +32,7 @@
   {
     "id": "3",
     "monsterId": 3,
-    "name": "ignivolt",
+    "name": "雷焰兽",
     "assetKey": "IGNIVOLT",
     "assetFrame": 0,
     "currentHp": 25,
@@ -47,7 +47,7 @@
   {
     "id": "4",
     "monsterId": 4,
-    "name": "aquavalor",
+    "name": "水勇士",
     "assetKey": "AQUAVALOR",
     "assetFrame": 0,
     "currentHp": 25,
@@ -62,7 +62,7 @@
   {
     "id": "5",
     "monsterId": 5,
-    "name": "frostsaber",
+    "name": "霜牙兽",
     "assetKey": "FROSTSABER",
     "assetFrame": 0,
     "currentHp": 25,
@@ -77,7 +77,7 @@
   {
     "id": "6",
     "monsterId": 3,
-    "name": "ignivolt",
+    "name": "雷焰兽",
     "assetKey": "IGNIVOLT",
     "assetFrame": 0,
     "currentHp": 15,
@@ -92,7 +92,7 @@
   {
     "id": "7",
     "monsterId": 2,
-    "name": "carnodusk",
+    "name": "暮牙兽",
     "assetKey": "CARNODUSK",
     "assetFrame": 0,
     "currentHp": 15,
@@ -107,7 +107,7 @@
   {
     "id": "101",
     "monsterId": 10,
-    "name": "sprigoon",
+    "name": "芽精灵",
     "assetKey": "MONSTER_1_FRONT",
     "assetFrame": 0,
     "currentHp": 28,
@@ -122,7 +122,7 @@
   {
     "id": "102",
     "monsterId": 11,
-    "name": "thornlynx",
+    "name": "棘山猫",
     "assetKey": "MONSTER_2_FRONT",
     "assetFrame": 0,
     "currentHp": 38,
@@ -137,7 +137,7 @@
   {
     "id": "103",
     "monsterId": 12,
-    "name": "embercub",
+    "name": "炽焰崽",
     "assetKey": "MONSTER_3_FRONT",
     "assetFrame": 0,
     "currentHp": 27,
@@ -152,7 +152,7 @@
   {
     "id": "104",
     "monsterId": 13,
-    "name": "blazehound",
+    "name": "烈焰犬",
     "assetKey": "MONSTER_4_FRONT",
     "assetFrame": 0,
     "currentHp": 36,
@@ -167,7 +167,7 @@
   {
     "id": "105",
     "monsterId": 14,
-    "name": "aquaffin",
+    "name": "水鳍兽",
     "assetKey": "MONSTER_5_FRONT",
     "assetFrame": 0,
     "currentHp": 29,
@@ -182,7 +182,7 @@
   {
     "id": "106",
     "monsterId": 15,
-    "name": "tideshell",
+    "name": "潮壳龟",
     "assetKey": "MONSTER_6_FRONT",
     "assetFrame": 0,
     "currentHp": 40,
@@ -197,7 +197,7 @@
   {
     "id": "107",
     "monsterId": 16,
-    "name": "beetbit",
+    "name": "甲虫精",
     "assetKey": "MONSTER_7_FRONT",
     "assetFrame": 0,
     "currentHp": 24,
@@ -212,7 +212,7 @@
   {
     "id": "108",
     "monsterId": 17,
-    "name": "mosscarab",
+    "name": "苔甲虫",
     "assetKey": "MONSTER_8_FRONT",
     "assetFrame": 0,
     "currentHp": 34,
@@ -227,7 +227,7 @@
   {
     "id": "109",
     "monsterId": 18,
-    "name": "voltkit",
+    "name": "电狐崽",
     "assetKey": "MONSTER_9_FRONT",
     "assetFrame": 0,
     "currentHp": 26,
@@ -242,7 +242,7 @@
   {
     "id": "110",
     "monsterId": 19,
-    "name": "stonehorn",
+    "name": "岩角兽",
     "assetKey": "MONSTER_10_FRONT",
     "assetFrame": 0,
     "currentHp": 33,
@@ -257,7 +257,7 @@
   {
     "id": "111",
     "monsterId": 20,
-    "name": "drillmole",
+    "name": "钻地鼹",
     "assetKey": "MONSTER_11_FRONT",
     "assetFrame": 0,
     "currentHp": 30,
@@ -272,7 +272,7 @@
   {
     "id": "112",
     "monsterId": 21,
-    "name": "quakeburrow",
+    "name": "震穴兽",
     "assetKey": "MONSTER_12_FRONT",
     "assetFrame": 0,
     "currentHp": 42,
@@ -287,7 +287,7 @@
   {
     "id": "113",
     "monsterId": 22,
-    "name": "rivulet",
+    "name": "溪流蛇",
     "assetKey": "MONSTER_13_FRONT",
     "assetFrame": 0,
     "currentHp": 31,
@@ -302,7 +302,7 @@
   {
     "id": "114",
     "monsterId": 23,
-    "name": "torrentail",
+    "name": "激流尾",
     "assetKey": "MONSTER_14_FRONT",
     "assetFrame": 0,
     "currentHp": 44,
@@ -317,7 +317,7 @@
   {
     "id": "115",
     "monsterId": 24,
-    "name": "reedimp",
+    "name": "芦苇小妖",
     "assetKey": "MONSTER_15_FRONT",
     "assetFrame": 0,
     "currentHp": 29,
@@ -332,7 +332,7 @@
   {
     "id": "116",
     "monsterId": 25,
-    "name": "bloomantis",
+    "name": "花螳螂",
     "assetKey": "MONSTER_16_FRONT",
     "assetFrame": 0,
     "currentHp": 39,
@@ -347,7 +347,7 @@
   {
     "id": "117",
     "monsterId": 26,
-    "name": "flarehawk",
+    "name": "焰隼",
     "assetKey": "MONSTER_17_FRONT",
     "assetFrame": 0,
     "currentHp": 34,
@@ -362,7 +362,7 @@
   {
     "id": "118",
     "monsterId": 27,
-    "name": "glintfin",
+    "name": "闪鳍鱼",
     "assetKey": "MONSTER_18_FRONT",
     "assetFrame": 0,
     "currentHp": 36,
@@ -377,7 +377,7 @@
   {
     "id": "119",
     "monsterId": 28,
-    "name": "solaraith_cub",
+    "name": "日炎幼兽",
     "assetKey": "MONSTER_19_FRONT",
     "assetFrame": 0,
     "currentHp": 36,
@@ -392,7 +392,7 @@
   {
     "id": "120",
     "monsterId": 29,
-    "name": "solaraith",
+    "name": "日炎巨兽",
     "assetKey": "MONSTER_20_FRONT",
     "assetFrame": 0,
     "currentHp": 54,
@@ -407,7 +407,7 @@
   {
     "id": "121",
     "monsterId": 30,
-    "name": "abyssalor_cub",
+    "name": "深渊幼兽",
     "assetKey": "MONSTER_21_FRONT",
     "assetFrame": 0,
     "currentHp": 38,
@@ -422,7 +422,7 @@
   {
     "id": "122",
     "monsterId": 31,
-    "name": "abyssalor",
+    "name": "深渊巨兽",
     "assetKey": "MONSTER_22_FRONT",
     "assetFrame": 0,
     "currentHp": 58,
@@ -437,7 +437,7 @@
   {
     "id": "123",
     "monsterId": 32,
-    "name": "verdion",
+    "name": "翠绿神兽",
     "assetKey": "MONSTER_23_FRONT",
     "assetFrame": 0,
     "currentHp": 56,
@@ -452,7 +452,7 @@
   {
     "id": "124",
     "monsterId": 33,
-    "name": "stormcrest",
+    "name": "风暴冠",
     "assetKey": "MONSTER_24_FRONT",
     "assetFrame": 0,
     "currentHp": 52,
@@ -467,7 +467,7 @@
   {
     "id": "125",
     "monsterId": 34,
-    "name": "frostplume",
+    "name": "霜羽鸟",
     "assetKey": "MONSTER_25_FRONT",
     "assetFrame": 0,
     "currentHp": 51,
@@ -482,7 +482,7 @@
   {
     "id": "126",
     "monsterId": 35,
-    "name": "pixibud",
+    "name": "精灵花蕾",
     "assetKey": "MONSTER_26_FRONT",
     "assetFrame": 0,
     "currentHp": 30,
@@ -497,7 +497,7 @@
   {
     "id": "127",
     "monsterId": 36,
-    "name": "aurorabbit",
+    "name": "极光兔",
     "assetKey": "MONSTER_27_FRONT",
     "assetFrame": 0,
     "currentHp": 41,
@@ -512,7 +512,7 @@
   {
     "id": "128",
     "monsterId": 37,
-    "name": "coralyn",
+    "name": "珊瑚精",
     "assetKey": "MONSTER_28_FRONT",
     "assetFrame": 0,
     "currentHp": 33,
@@ -527,7 +527,7 @@
   {
     "id": "129",
     "monsterId": 38,
-    "name": "tidecelest",
+    "name": "潮汐仙",
     "assetKey": "MONSTER_29_FRONT",
     "assetFrame": 0,
     "currentHp": 47,
@@ -542,7 +542,7 @@
   {
     "id": "130",
     "monsterId": 39,
-    "name": "embermuse",
+    "name": "焰灵鼠",
     "assetKey": "MONSTER_30_FRONT",
     "assetFrame": 0,
     "currentHp": 37,
@@ -557,7 +557,7 @@
   {
     "id": "131",
     "monsterId": 40,
-    "name": "mossfawn",
+    "name": "苔鹿",
     "assetKey": "MONSTER_31_FRONT",
     "assetFrame": 0,
     "currentHp": 34,
@@ -572,7 +572,7 @@
   {
     "id": "132",
     "monsterId": 41,
-    "name": "florastag",
+    "name": "花鹿王",
     "assetKey": "MONSTER_32_FRONT",
     "assetFrame": 0,
     "currentHp": 49,
@@ -587,7 +587,7 @@
   {
     "id": "133",
     "monsterId": 42,
-    "name": "shardillo",
+    "name": "晶甲兽",
     "assetKey": "MONSTER_33_FRONT",
     "assetFrame": 0,
     "currentHp": 40,
@@ -602,7 +602,7 @@
   {
     "id": "134",
     "monsterId": 43,
-    "name": "zephyrimp",
+    "name": "风小妖",
     "assetKey": "MONSTER_34_FRONT",
     "assetFrame": 0,
     "currentHp": 35,
@@ -617,7 +617,7 @@
   {
     "id": "135",
     "monsterId": 44,
-    "name": "mistowl",
+    "name": "雾枭",
     "assetKey": "MONSTER_35_FRONT",
     "assetFrame": 0,
     "currentHp": 38,
@@ -632,7 +632,7 @@
   {
     "id": "136",
     "monsterId": 45,
-    "name": "gearcub",
+    "name": "齿轮崽",
     "assetKey": "MONSTER_36_FRONT",
     "assetFrame": 0,
     "currentHp": 42,
@@ -647,7 +647,7 @@
   {
     "id": "137",
     "monsterId": 46,
-    "name": "petalisk",
+    "name": "花瓣蛇",
     "assetKey": "MONSTER_37_FRONT",
     "assetFrame": 0,
     "currentHp": 36,
@@ -662,7 +662,7 @@
   {
     "id": "138",
     "monsterId": 47,
-    "name": "galeafawn",
+    "name": "风叶鹿",
     "assetKey": "MONSTER_38_FRONT",
     "assetFrame": 0,
     "currentHp": 38,
@@ -677,7 +677,7 @@
   {
     "id": "139",
     "monsterId": 48,
-    "name": "sporemarch",
+    "name": "孢子卫兵",
     "assetKey": "MONSTER_39_FRONT",
     "assetFrame": 0,
     "currentHp": 36,
@@ -692,7 +692,7 @@
   {
     "id": "140",
     "monsterId": 49,
-    "name": "windthorn",
+    "name": "风棘",
     "assetKey": "MONSTER_40_FRONT",
     "assetFrame": 0,
     "currentHp": 34,
@@ -707,7 +707,7 @@
   {
     "id": "141",
     "monsterId": 50,
-    "name": "vinehorn",
+    "name": "藤角兽",
     "assetKey": "MONSTER_41_FRONT",
     "assetFrame": 0,
     "currentHp": 44,
@@ -722,7 +722,7 @@
   {
     "id": "142",
     "monsterId": 51,
-    "name": "cinderpup",
+    "name": "灰烬犬",
     "assetKey": "MONSTER_42_FRONT",
     "assetFrame": 0,
     "currentHp": 32,
@@ -737,7 +737,7 @@
   {
     "id": "143",
     "monsterId": 52,
-    "name": "sunfang",
+    "name": "日焰牙",
     "assetKey": "MONSTER_43_FRONT",
     "assetFrame": 0,
     "currentHp": 46,
@@ -752,7 +752,7 @@
   {
     "id": "144",
     "monsterId": 53,
-    "name": "warmaul",
+    "name": "战锤兽",
     "assetKey": "MONSTER_44_FRONT",
     "assetFrame": 0,
     "currentHp": 58,
@@ -767,7 +767,7 @@
   {
     "id": "145",
     "monsterId": 54,
-    "name": "blazedrake",
+    "name": "焰龙",
     "assetKey": "MONSTER_45_FRONT",
     "assetFrame": 0,
     "currentHp": 52,
@@ -782,7 +782,7 @@
   {
     "id": "146",
     "monsterId": 55,
-    "name": "snowkit",
+    "name": "雪狐崽",
     "assetKey": "MONSTER_46_FRONT",
     "assetFrame": 0,
     "currentHp": 34,
@@ -797,7 +797,7 @@
   {
     "id": "147",
     "monsterId": 56,
-    "name": "aurorafang",
+    "name": "极光牙",
     "assetKey": "MONSTER_47_FRONT",
     "assetFrame": 0,
     "currentHp": 48,

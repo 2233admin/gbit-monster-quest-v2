@@ -1,307 +1,307 @@
 [
   {
     "id": 1,
-    "name": "ice shard",
+    "name": "冰碎片",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 2,
-    "name": "slash",
+    "name": "劈斩",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 3,
-    "name": "quick_strike",
+    "name": "迅击",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 4,
-    "name": "leaf_blade",
+    "name": "叶刃",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 5,
-    "name": "thorn_whip",
+    "name": "棘鞭",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 6,
-    "name": "ember_burst",
+    "name": "火花爆",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 7,
-    "name": "flame_dash",
+    "name": "焰袭",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 8,
-    "name": "water_jet",
+    "name": "水流弹",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 9,
-    "name": "tidal_arc",
+    "name": "潮旋弧",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 10,
-    "name": "bug_bite",
+    "name": "虫咬",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 11,
-    "name": "spore_dust",
+    "name": "孢粉",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 12,
-    "name": "spark_hit",
+    "name": "电击",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 13,
-    "name": "static_bolt",
+    "name": "静电弧",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 14,
-    "name": "stone_crash",
+    "name": "碎岩",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 15,
-    "name": "horn_rush",
+    "name": "角突",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 16,
-    "name": "solar_slice",
+    "name": "日光斩",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 17,
-    "name": "inferno_pounce",
+    "name": "炼狱扑",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 18,
-    "name": "hydro_press",
+    "name": "水压击",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 19,
-    "name": "swarm_drive",
+    "name": "群虫冲",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 20,
-    "name": "volt_lance",
+    "name": "雷枪",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 21,
-    "name": "shell_breaker",
+    "name": "破壳击",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 22,
-    "name": "mud_spike",
+    "name": "泥刺",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 23,
-    "name": "aqua_lance",
+    "name": "水矛",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 24,
-    "name": "vine_guard",
+    "name": "藤蔓盾",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 25,
-    "name": "magma_surge",
+    "name": "岩浆涌",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 26,
-    "name": "thunder_current",
+    "name": "雷流",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 27,
-    "name": "relic_roar",
+    "name": "古兽咆哮",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 28,
-    "name": "aurora_tide",
+    "name": "极光潮",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 29,
-    "name": "celestial_bloom",
+    "name": "星华绽放",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 30,
-    "name": "toxic_spores",
+    "name": "毒孢子",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 31,
-    "name": "flame_focus",
+    "name": "聚焰",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 32,
-    "name": "aqua_shield",
+    "name": "水之盾",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 33,
-    "name": "mind_shock",
+    "name": "精神冲击",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 34,
-    "name": "fairy_pulse",
+    "name": "妖精脉冲",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 35,
-    "name": "moon_barrier",
+    "name": "月光壁",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 36,
-    "name": "prism_lance",
+    "name": "棱光枪",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 37,
-    "name": "starlight_waltz",
+    "name": "星光之舞",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 38,
-    "name": "lava_claw",
+    "name": "熔岩爪",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 39,
-    "name": "inferno_halberd",
+    "name": "炼狱戟",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 40,
-    "name": "verdant_inferno",
+    "name": "翠焰",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 41,
-    "name": "frost_arc",
+    "name": "冰弧",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 42,
-    "name": "ember_howl",
+    "name": "焰嚎",
     "animationName": "FLAME",
     "audioKey": "FLAME"
   },
   {
     "id": 43,
-    "name": "glacial_veil",
+    "name": "冰川幕",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 44,
-    "name": "vine_whip",
+    "name": "藤鞭",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 45,
-    "name": "absorb",
+    "name": "吸取",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 46,
-    "name": "mega_drain",
+    "name": "超级吸取",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 47,
-    "name": "leech_seed",
+    "name": "寄生种子",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 48,
-    "name": "sleep_powder",
+    "name": "催眠粉",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 49,
-    "name": "stun_spore",
+    "name": "麻痹粉",
     "animationName": "SLASH",
     "audioKey": "CLAW"
   },
   {
     "id": 50,
-    "name": "frost_peck",
+    "name": "冰喙",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   },
   {
     "id": 51,
-    "name": "blizzard_burst",
+    "name": "暴风雪",
     "animationName": "ICE_SHARD",
     "audioKey": "ICE"
   }
