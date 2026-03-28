@@ -171,6 +171,8 @@ export const DATA_ASSET_KEYS = Object.freeze({
   NPCS: 'NPCS',
   EVENTS: 'EVENTS',
   SIGNS: 'SIGNS',
+  GBIT_ATTACKS: 'GBIT_ATTACKS',
+  GBIT_MONSTERS: 'GBIT_MONSTERS',
 });
 
 export const ATTACK_ASSET_KEYS = Object.freeze({

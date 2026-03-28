@@ -141,6 +141,9 @@ export class PreloadScene extends BaseScene {
     this.load.json(DATA_ASSET_KEYS.NPCS, 'assets/data/npcs.json');
     this.load.json(DATA_ASSET_KEYS.EVENTS, 'assets/data/events.json');
     this.load.json(DATA_ASSET_KEYS.SIGNS, 'assets/data/signs.json');
+    // GBIT Monster Quest data
+    this.load.json(DATA_ASSET_KEYS.GBIT_ATTACKS, 'assets/data/gbit-attacks.json');
+    this.load.json(DATA_ASSET_KEYS.GBIT_MONSTERS, 'assets/data/gbit-monsters.json');
 
     // load custom fonts
     this.load.addFile(new WebFontFileLoader(this.load, [KENNEY_FUTURE_NARROW_FONT_NAME]));

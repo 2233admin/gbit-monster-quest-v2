@@ -108,4 +108,41 @@ export class DataUtils {
     const data = scene.cache.json.get(DATA_ASSET_KEYS.SIGNS);
     return data[signId];
   }
+
+  /**
+   * Retrieve a GBIT attack by id from gbit-attacks.json (IDs start at 100).
+   * @param {Phaser.Scene} scene
+   * @param {number} attackId
+   * @returns {import("../types/typedef.js").Attack | undefined}
+   */
+  static getGbitAttack(scene, attackId) {
+    const data = scene.cache.json.get(DATA_ASSET_KEYS.GBIT_ATTACKS);
+    return data.find((attack) => attack.id === attackId);
+  }
+
+  /**
+   * Retrieve a GBIT monster instance by id from gbit-monsters.json (IDs start at 100).
+   * @param {Phaser.Scene} scene
+   * @param {number} id
+   * @returns {import("../types/typedef.js").Monster | undefined}
+   */
+  static getGbitMonsterById(scene, id) {
+    const data = scene.cache.json.get(DATA_ASSET_KEYS.GBIT_MONSTERS);
+    const monster = data.find((monster) => monster.id === id.toString(10));
+    return monster ? JSON.parse(JSON.stringify(monster)) : undefined;
+  }
+
+  /**
+   * Unified attack lookup: checks GBIT attacks (id >= 100) first, then base attacks.
+   * @param {Phaser.Scene} scene
+   * @param {number} attackId
+   * @returns {import("../types/typedef.js").Attack | undefined}
+   */
+  static getAttack(scene, attackId) {
+    if (attackId >= 100) {
+      return DataUtils.getGbitAttack(scene, attackId);
+    }
+    return DataUtils.getMonsterAttack(scene, attackId);
+  }
+
 }
