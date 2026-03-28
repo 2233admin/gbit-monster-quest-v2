@@ -1,7 +1,7 @@
 import Phaser from '../../lib/phaser.js';
 import { HealthBar } from '../../common/health-bar.js';
 import { BATTLE_ASSET_KEYS } from '../../assets/asset-keys.js';
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../../assets/font-keys.js';
+import { FUSION_PIXEL_FONT_NAME } from '../../assets/font-keys.js';
 import { DataUtils } from '../../utils/data-utils.js';
 
 export class BattleMonster {
@@ -203,7 +203,7 @@ export class BattleMonster {
     this._healthBar = new HealthBar(this._scene, 34, 34);
 
     this._monsterNameText = this._scene.add.text(30, 20, this.name, {
-      fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+      fontFamily: FUSION_PIXEL_FONT_NAME,
       color: '#7E3D3F',
       fontSize: '32px',
     });
@@ -214,14 +214,14 @@ export class BattleMonster {
       .setScale(1, scaleHealthBarBackgroundImageByY);
 
     this._monsterHealthBarLevelText = this._scene.add.text(this._monsterNameText.width + 35, 23, '', {
-      fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+      fontFamily: FUSION_PIXEL_FONT_NAME,
       color: '#ED474B',
       fontSize: '28px',
     });
     this._setMonsterLevelText();
 
     const monsterHpText = this._scene.add.text(30, 55, 'HP', {
-      fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+      fontFamily: FUSION_PIXEL_FONT_NAME,
       color: '#FF6505',
       fontSize: '24px',
       fontStyle: 'italic',

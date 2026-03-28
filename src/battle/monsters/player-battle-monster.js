@@ -1,4 +1,4 @@
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../../assets/font-keys.js';
+import { FUSION_PIXEL_FONT_NAME } from '../../assets/font-keys.js';
 import { ExpBar } from '../../common/exp-bar.js';
 import { calculateExpBarCurrentValue, handleMonsterGainingExperience } from '../../utils/leveling-utils.js';
 import { BattleMonster } from './battle-monster.js';
@@ -34,7 +34,7 @@ export class PlayerBattleMonster extends BattleMonster {
   #addHealthBarComponents() {
     this.#healthBarTextGameObject = this._scene.add
       .text(443, 80, '', {
-        fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+        fontFamily: FUSION_PIXEL_FONT_NAME,
         color: '#7E3D3F',
         fontSize: '16px',
       })
@@ -189,7 +189,7 @@ export class PlayerBattleMonster extends BattleMonster {
     );
 
     const monsterExpText = this._scene.add.text(30, 100, 'EXP', {
-      fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+      fontFamily: FUSION_PIXEL_FONT_NAME,
       color: '#6505FF',
       fontSize: '14px',
       fontStyle: 'italic',

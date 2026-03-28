@@ -1,6 +1,6 @@
 import Phaser from '../lib/phaser.js';
 import { INVENTORY_ASSET_KEYS, UI_ASSET_KEYS } from '../assets/asset-keys.js';
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../assets/font-keys.js';
+import { FUSION_PIXEL_FONT_NAME } from '../assets/font-keys.js';
 import { DIRECTION } from '../common/direction.js';
 import { dataManager } from '../utils/data-manager.js';
 import { exhaustiveGuard } from '../utils/guard.js';
@@ -9,8 +9,8 @@ import { BaseScene } from './base-scene.js';
 import { SCENE_KEYS } from './scene-keys.js';
 import { ITEM_CATEGORY } from '../types/typedef.js';
 
-const CANCEL_TEXT_DESCRIPTION = 'Close your bag, and go back to adventuring!';
-const CANNOT_USE_ITEM_TEXT = 'That item cannot be used right now.';
+const CANCEL_TEXT_DESCRIPTION = '关闭背包，回到冒险中！';
+const CANNOT_USE_ITEM_TEXT = '现在无法使用该道具。';
 
 const INVENTORY_ITEM_POSITION = Object.freeze({
   x: 50,
@@ -20,9 +20,9 @@ const INVENTORY_ITEM_POSITION = Object.freeze({
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const INVENTORY_TEXT_STYLE = {
-  fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+  fontFamily: FUSION_PIXEL_FONT_NAME,
   color: '#e8e4f0',
-  fontSize: '30px',
+  fontSize: '36px',
   shadow: { offsetX: 1, offsetY: 1, color: '#000000', blur: 2, fill: true },
 };
 
@@ -132,7 +132,7 @@ export class InventoryScene extends BaseScene {
     const titleContainerBackground = this.add.rectangle(4, 4, 232, 56, 0x1a2a3a).setOrigin(0).setAlpha(0.85);
     titleContainer.add(titleContainerBackground);
 
-    const textTitle = this.add.text(116, 28, 'Items', INVENTORY_TEXT_STYLE).setOrigin(0.5);
+    const textTitle = this.add.text(116, 28, '道具', INVENTORY_TEXT_STYLE).setOrigin(0.5);
     titleContainer.add(textTitle);
 
     // create inventory text from available items
@@ -165,7 +165,7 @@ export class InventoryScene extends BaseScene {
     const cancelText = this.add.text(
       INVENTORY_ITEM_POSITION.x,
       INVENTORY_ITEM_POSITION.y + this.#inventory.length * INVENTORY_ITEM_POSITION.space,
-      'Cancel',
+      '取消',
       INVENTORY_TEXT_STYLE
     );
     container.add(cancelText);
@@ -248,7 +248,7 @@ export class InventoryScene extends BaseScene {
           // TODO: this logic will need to be updated if we support a monster storage system
           // validate we have room in our party before attempting capture
           if (dataManager.isPartyFull()) {
-            this.#selectedInventoryDescriptionText.setText('You have no room in your party! Cannot use that item.');
+            this.#selectedInventoryDescriptionText.setText('队伍已满！无法使用该道具。');
             this.#waitingForInput = true;
             return;
           }

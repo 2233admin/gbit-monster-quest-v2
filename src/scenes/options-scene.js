@@ -2,7 +2,7 @@ import Phaser from '../lib/phaser.js';
 import { SCENE_KEYS } from './scene-keys.js';
 import { UI_ASSET_KEYS } from '../assets/asset-keys.js';
 import { NineSlice } from '../utils/nine-slice.js';
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../assets/font-keys.js';
+import { FUSION_PIXEL_FONT_NAME } from '../assets/font-keys.js';
 import {
   BATTLE_SCENE_OPTIONS,
   BATTLE_STYLE_OPTIONS,
@@ -18,19 +18,19 @@ import { setGlobalSoundSettings } from '../utils/audio-utils.js';
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const OPTIONS_TEXT_STYLE = {
-  fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+  fontFamily: FUSION_PIXEL_FONT_NAME,
   color: '#FFFFFF',
-  fontSize: '30px',
+  fontSize: '36px',
 };
 
 const OPTION_MENU_OPTION_INFO_MSG = Object.freeze({
-  TEXT_SPEED: 'Choose one of three text display speeds.',
-  BATTLE_SCENE: 'Choose to display battle animations and effects or not.',
-  BATTLE_STYLE: 'Choose to allow your monster to be recalled between rounds.',
-  SOUND: 'Choose to enable or disable the sound.',
-  VOLUME: 'Choose the volume of the music and sound effects of the game.',
-  MENU_COLOR: 'Choose one of the three menu color options.',
-  CONFIRM: 'Save your changes and go back to the main menu.',
+  TEXT_SPEED: '选择三种文字显示速度之一。',
+  BATTLE_SCENE: '选择是否显示战斗动画和特效。',
+  BATTLE_STYLE: '选择是否允许在回合间更换怪兽。',
+  SOUND: '选择开启或关闭音效。',
+  VOLUME: '选择游戏音乐和音效的音量。',
+  MENU_COLOR: '选择三种菜单配色之一。',
+  CONFIRM: '保存更改并返回主菜单。',
 });
 
 const TEXT_FONT_COLORS = Object.freeze({
@@ -126,13 +126,13 @@ export class OptionsScene extends BaseScene {
     this.#mainContainer.setX(100).setY(20);
 
     // create main option sections
-    this.add.text(width / 2, 40, 'Options', OPTIONS_TEXT_STYLE).setOrigin(0.5);
+    this.add.text(width / 2, 40, '设置', OPTIONS_TEXT_STYLE).setOrigin(0.5);
     const menuOptionsPosition = {
       x: 25,
       yStart: 55,
       yIncrement: 55,
     };
-    const menuOptions = ['Text Speed', 'Battle Scene', 'Battle Style', 'Sound', 'Volume', 'Menu Color', 'Close'];
+    const menuOptions = ['文字速度', '战斗动画', '战斗模式', '音效', '音量', '菜单配色', '关闭'];
     menuOptions.forEach((option, index) => {
       const x = menuOptionsPosition.x;
       const y = menuOptionsPosition.yStart + menuOptionsPosition.yIncrement * index;
@@ -142,27 +142,27 @@ export class OptionsScene extends BaseScene {
 
     // create text speed options
     this.#textSpeedOptionTextGameObjects = this.add.group([
-      this.add.text(420, 75, 'Slow', OPTIONS_TEXT_STYLE),
-      this.add.text(590, 75, 'Mid', OPTIONS_TEXT_STYLE),
-      this.add.text(760, 75, 'Fast', OPTIONS_TEXT_STYLE),
+      this.add.text(420, 75, '慢', OPTIONS_TEXT_STYLE),
+      this.add.text(590, 75, '中', OPTIONS_TEXT_STYLE),
+      this.add.text(760, 75, '快', OPTIONS_TEXT_STYLE),
     ]);
 
     // create battle scene options
     this.#battleSceneOptionTextGameObjects = this.add.group([
-      this.add.text(420, 130, 'On', OPTIONS_TEXT_STYLE),
-      this.add.text(590, 130, 'Off', OPTIONS_TEXT_STYLE),
+      this.add.text(420, 130, '开', OPTIONS_TEXT_STYLE),
+      this.add.text(590, 130, '关', OPTIONS_TEXT_STYLE),
     ]);
 
     // create battle style options
     this.#battleStyleOptionTextGameObjects = this.add.group([
-      this.add.text(420, 185, 'Set', OPTIONS_TEXT_STYLE),
-      this.add.text(590, 185, 'Shift', OPTIONS_TEXT_STYLE),
+      this.add.text(420, 185, '固定', OPTIONS_TEXT_STYLE),
+      this.add.text(590, 185, '切换', OPTIONS_TEXT_STYLE),
     ]);
 
     // create sound options
     this.#soundOptionTextGameObjects = this.add.group([
-      this.add.text(420, 240, 'On', OPTIONS_TEXT_STYLE),
-      this.add.text(590, 240, 'Off', OPTIONS_TEXT_STYLE),
+      this.add.text(420, 240, '开', OPTIONS_TEXT_STYLE),
+      this.add.text(590, 240, '关', OPTIONS_TEXT_STYLE),
     ]);
 
     // volume options

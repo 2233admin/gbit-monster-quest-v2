@@ -1,11 +1,11 @@
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../../../assets/font-keys.js';
+import { FUSION_PIXEL_FONT_NAME } from '../../../assets/font-keys.js';
 import Phaser from '../../../lib/phaser.js';
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 export const BATTLE_UI_TEXT_STYLE = Object.freeze({
-  fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+  fontFamily: FUSION_PIXEL_FONT_NAME,
   color: '#e8e4f0',
-  fontSize: '30px',
+  fontSize: '36px',
   shadow: {
     offsetX: 1,
     offsetY: 1,

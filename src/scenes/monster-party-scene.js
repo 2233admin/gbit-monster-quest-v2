@@ -5,7 +5,7 @@ import {
   MONSTER_PARTY_ASSET_KEYS,
   UI_ASSET_KEYS,
 } from '../assets/asset-keys.js';
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../assets/font-keys.js';
+import { FUSION_PIXEL_FONT_NAME } from '../assets/font-keys.js';
 import { HealthBar } from '../common/health-bar.js';
 import { DIRECTION } from '../common/direction.js';
 import { DATA_MANAGER_STORE_KEYS, dataManager } from '../utils/data-manager.js';
@@ -19,9 +19,9 @@ import { BATTLE_THEME, drawPanel } from '../utils/ui-theme.js';
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const UI_TEXT_STYLE = {
-  fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+  fontFamily: FUSION_PIXEL_FONT_NAME,
   color: '#FFFFFF',
-  fontSize: '24px',
+  fontSize: '36px',
 };
 
 const MONSTER_PARTY_POSITIONS = Object.freeze({
@@ -121,7 +121,7 @@ export class MonsterPartyScene extends BaseScene {
     // create button
     const buttonContainer = this.add.container(883, 519, []);
     this.#cancelButton = this.add.image(0, 0, UI_ASSET_KEYS.BLUE_BUTTON, 0).setOrigin(0).setScale(0.7, 1).setAlpha(0.7);
-    const cancelText = this.add.text(66.5, 20.6, 'cancel', UI_TEXT_STYLE).setOrigin(0.5);
+    const cancelText = this.add.text(66.5, 20.6, '取消', UI_TEXT_STYLE).setOrigin(0.5);
     buttonContainer.add([this.#cancelButton, cancelText]);
 
     // create info container
@@ -129,9 +129,9 @@ export class MonsterPartyScene extends BaseScene {
     const infoDisplayGraphics = this.add.graphics();
     drawPanel(infoDisplayGraphics, 0, 0, 867, 65, BATTLE_THEME.menuPanel, { radius: 10 });
     this.#infoTextGameObject = this.add.text(15, 14, '', {
-      fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+      fontFamily: FUSION_PIXEL_FONT_NAME,
       color: '#e8e4f0',
-      fontSize: '32px',
+      fontSize: '36px',
       shadow: { offsetX: 1, offsetY: 1, color: '#000000', blur: 2, fill: true },
     });
     infoContainer.add([infoDisplayGraphics, this.#infoTextGameObject]);
@@ -259,10 +259,10 @@ export class MonsterPartyScene extends BaseScene {
    */
   #updateInfoContainerText() {
     if (this.#selectedPartyMonsterIndex === -1) {
-      this.#infoTextGameObject.setText('Go back to previous menu');
+      this.#infoTextGameObject.setText('返回上一级菜单');
       return;
     }
-    this.#infoTextGameObject.setText('Choose a monster');
+    this.#infoTextGameObject.setText('选择一只怪兽');
   }
 
   /**
@@ -296,29 +296,29 @@ export class MonsterPartyScene extends BaseScene {
     this.#healthBars.push(healthBar);
 
     const monsterHpText = this.add.text(164, 66, 'HP', {
-      fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+      fontFamily: FUSION_PIXEL_FONT_NAME,
       color: '#FF6505',
-      fontSize: '24px',
+      fontSize: '36px',
       fontStyle: 'italic',
     });
 
     const monsterHealthBarLevelText = this.add.text(26, 116, `Lv. ${monsterDetails.currentLevel}`, {
-      fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+      fontFamily: FUSION_PIXEL_FONT_NAME,
       color: '#ffffff',
-      fontSize: '22px',
+      fontSize: '36px',
     });
 
     const monsterNameGameText = this.add.text(162, 36, monsterDetails.name, {
-      fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+      fontFamily: FUSION_PIXEL_FONT_NAME,
       color: '#ffffff',
-      fontSize: '30px',
+      fontSize: '36px',
     });
 
     const healthBarTextGameObject = this.add
       .text(458, 95, `${monsterDetails.currentHp} / ${monsterDetails.maxHp}`, {
-        fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+        fontFamily: FUSION_PIXEL_FONT_NAME,
         color: '#ffffff',
-        fontSize: '38px',
+        fontSize: '36px',
       })
       .setOrigin(1, 0);
     this.#healthBarTextGameObjects.push(healthBarTextGameObject);
@@ -353,7 +353,7 @@ export class MonsterPartyScene extends BaseScene {
       !wasMonsterSelected
     ) {
       // if active monster was knocked out, return early since we need to pick a new monster for battle
-      this.#infoTextGameObject.setText('You must select a new monster for battle.');
+      this.#infoTextGameObject.setText('必须选择一只新怪兽参战。');
       this.#waitingForInput = true;
       this.#menu.hide();
       return;
@@ -442,7 +442,7 @@ export class MonsterPartyScene extends BaseScene {
   #handleHealItemUsed(amount) {
     // validate that the monster is not fainted
     if (this.#monsters[this.#selectedPartyMonsterIndex].currentHp === 0) {
-      this.#infoTextGameObject.setText('Cannot heal fainted monster');
+      this.#infoTextGameObject.setText('无法治疗倒下的怪兽');
       this.#waitingForInput = true;
       this.#menu.hide();
       return;
@@ -453,7 +453,7 @@ export class MonsterPartyScene extends BaseScene {
       this.#monsters[this.#selectedPartyMonsterIndex].currentHp ===
       this.#monsters[this.#selectedPartyMonsterIndex].maxHp
     ) {
-      this.#infoTextGameObject.setText('Monster is already fully healed');
+      this.#infoTextGameObject.setText('怪兽已经满血了');
       this.#waitingForInput = true;
       this.#menu.hide();
       return;
@@ -467,7 +467,7 @@ export class MonsterPartyScene extends BaseScene {
     ) {
       this.#monsters[this.#selectedPartyMonsterIndex].currentHp = this.#monsters[this.#selectedPartyMonsterIndex].maxHp;
     }
-    this.#infoTextGameObject.setText(`Healed monster by ${amount} HP`);
+    this.#infoTextGameObject.setText(`治疗了 ${amount} HP`);
     this.#healthBars[this.#selectedPartyMonsterIndex].setMeterPercentageAnimated(
       this.#monsters[this.#selectedPartyMonsterIndex].currentHp / this.#monsters[this.#selectedPartyMonsterIndex].maxHp,
       {
@@ -492,7 +492,7 @@ export class MonsterPartyScene extends BaseScene {
   #handleMonsterSelectedForSwitch() {
     // validate that the monster is not fainted
     if (this.#monsters[this.#selectedPartyMonsterIndex].currentHp === 0) {
-      this.#infoTextGameObject.setText('Selected monster is not able to fight.');
+      this.#infoTextGameObject.setText('选中的怪兽无法战斗。');
       this.#waitingForInput = true;
       this.#menu.hide();
       return;
@@ -500,7 +500,7 @@ export class MonsterPartyScene extends BaseScene {
 
     // validate that the selected monster is not the current active monster in battle
     if (this.#sceneData.activeBattleMonsterPartyIndex === this.#selectedPartyMonsterIndex) {
-      this.#infoTextGameObject.setText('Selected monster is already battling');
+      this.#infoTextGameObject.setText('选中的怪兽已经在战斗了');
       this.#waitingForInput = true;
       this.#menu.hide();
       return;
@@ -556,7 +556,7 @@ export class MonsterPartyScene extends BaseScene {
 
       if (this.#menu.selectedMenuOption === MONSTER_PARTY_MENU_OPTIONS.RELEASE) {
         if (this.#monsters.length <= 1) {
-          this.#infoTextGameObject.setText('Cannot release last monster in party');
+          this.#infoTextGameObject.setText('无法放生队伍中最后一只怪兽');
           this.#waitingForInput = true;
           this.#menu.hide();
           return;
@@ -564,13 +564,13 @@ export class MonsterPartyScene extends BaseScene {
 
         this.#menu.hide();
         this.#confirmationMenu.show();
-        this.#infoTextGameObject.setText(`Release ${this.#monsters[this.#selectedPartyMonsterIndex].name}?`);
+        this.#infoTextGameObject.setText(`放生 ${this.#monsters[this.#selectedPartyMonsterIndex].name}？`);
         return;
       }
 
       if (this.#menu.selectedMenuOption === MONSTER_PARTY_MENU_OPTIONS.MOVE) {
         if (this.#monsters.length <= 1) {
-          this.#infoTextGameObject.setText('Cannot move monster');
+          this.#infoTextGameObject.setText('无法移动怪兽');
           this.#waitingForInput = true;
           this.#menu.hide();
           return;
@@ -578,7 +578,7 @@ export class MonsterPartyScene extends BaseScene {
 
         this.#isMovingMonster = true;
         this.#monsterToBeMovedIndex = this.#selectedPartyMonsterIndex;
-        this.#infoTextGameObject.setText('Choose a monster to switch positions with');
+        this.#infoTextGameObject.setText('选择一只怪兽来交换位置');
         this.#menu.hide();
         return;
       }
@@ -615,7 +615,7 @@ export class MonsterPartyScene extends BaseScene {
         if (this.#menu.selectedMenuOption === MONSTER_PARTY_MENU_OPTIONS.RELEASE) {
           this._controls.lockInput = true;
           this.#infoTextGameObject.setText(
-            `You released ${this.#monsters[this.#selectedPartyMonsterIndex].name} into the wild.`
+            `你将 ${this.#monsters[this.#selectedPartyMonsterIndex].name} 放生了。`
           );
           this.time.delayedCall(1000, () => {
             this.#removeMonster();

@@ -1,7 +1,7 @@
 import Phaser from '../lib/phaser.js';
 import { SCENE_KEYS } from './scene-keys.js';
 import { AUDIO_ASSET_KEYS, EXTERNAL_LINKS_ASSET_KEYS, TITLE_ASSET_KEYS, UI_ASSET_KEYS } from '../assets/asset-keys.js';
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../assets/font-keys.js';
+import { FUSION_PIXEL_FONT_NAME } from '../assets/font-keys.js';
 import { DIRECTION } from '../common/direction.js';
 import { exhaustiveGuard } from '../utils/guard.js';
 import { NineSlice } from '../utils/nine-slice.js';
@@ -12,9 +12,9 @@ import { playBackgroundMusic } from '../utils/audio-utils.js';
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const MENU_TEXT_STYLE = Object.freeze({
-  fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+  fontFamily: FUSION_PIXEL_FONT_NAME,
   color: '#4D4A49',
-  fontSize: '30px',
+  fontSize: '36px',
 });
 
 const PLAYER_INPUT_CURSOR_POSITION = Object.freeze({
@@ -88,12 +88,12 @@ export class TitleScene extends BaseScene {
       200,
       UI_ASSET_KEYS.MENU_BACKGROUND
     );
-    const newGameText = this.add.text(menuBgWidth / 2, 40, 'New Game', MENU_TEXT_STYLE).setOrigin(0.5);
-    const continueText = this.add.text(menuBgWidth / 2, 90, 'Continue', MENU_TEXT_STYLE).setOrigin(0.5);
+    const newGameText = this.add.text(menuBgWidth / 2, 40, '新游戏', MENU_TEXT_STYLE).setOrigin(0.5);
+    const continueText = this.add.text(menuBgWidth / 2, 90, '继续', MENU_TEXT_STYLE).setOrigin(0.5);
     if (!this.#isContinueButtonEnabled) {
       continueText.setAlpha(0.5);
     }
-    const optionText = this.add.text(menuBgWidth / 2, 140, 'Options', MENU_TEXT_STYLE).setOrigin(0.5);
+    const optionText = this.add.text(menuBgWidth / 2, 140, '设置', MENU_TEXT_STYLE).setOrigin(0.5);
     const menuContainer = this.add.container(0, 0, [menuBgContainer, newGameText, continueText, optionText]);
     menuContainer.setPosition(this.scale.width / 2 - menuBgWidth / 2, 300);
 
@@ -309,7 +309,7 @@ export class TitleScene extends BaseScene {
     container.add(bg);
 
     const sideBarText = this.add
-      .text(20, 5, 'Learn To Build This Game!', {
+      .text(20, 5, '学习制作这款游戏！', {
         fontSize: '18px',
       })
       .setOrigin(0, 0);
@@ -322,7 +322,7 @@ export class TitleScene extends BaseScene {
     container.add(youTubeLogo);
 
     const moreInfoText = this.add
-      .text(20, 155, 'In this free series, learn how to build this Pokemon like RPG from scratch!', {
+      .text(20, 155, '在这个免费系列中，学习如何从零开始制作这款宝可梦风格的RPG！', {
         fontSize: '20px',
         wordWrap: { width: 300 },
       })

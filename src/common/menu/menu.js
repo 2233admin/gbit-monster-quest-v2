@@ -1,6 +1,6 @@
 import Phaser from '../../lib/phaser.js';
 import { UI_ASSET_KEYS } from '../../assets/asset-keys.js';
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../../assets/font-keys.js';
+import { FUSION_PIXEL_FONT_NAME } from '../../assets/font-keys.js';
 import { DIRECTION } from '../../common/direction.js';
 import { DATA_MANAGER_STORE_KEYS, dataManager } from '../../utils/data-manager.js';
 import { exhaustiveGuard } from '../../utils/guard.js';
@@ -9,9 +9,9 @@ import { UI_THEME, drawPanel, slideIn, createCursorPulse } from '../../utils/ui-
 
 /** @type {Phaser.Types.GameObjects.Text.TextStyle} */
 const MENU_TEXT_STYLE = {
-  fontFamily: KENNEY_FUTURE_NARROW_FONT_NAME,
+  fontFamily: FUSION_PIXEL_FONT_NAME,
   color: '#FFFFFF',
-  fontSize: '32px',
+  fontSize: '36px',
 };
 
 export class Menu {
@@ -45,14 +45,18 @@ export class Menu {
   /**
    * @param {Phaser.Scene} scene
    * @param {string[]} menuOptions
+   * @param {string[]} [menuLabels] optional display labels; defaults to menuOptions when not provided
    */
-  constructor(scene, menuOptions) {
+  constructor(scene, menuOptions, menuLabels) {
     this.#scene = scene;
     this.#padding = 4;
     this.#width = 300;
     this.#availableMenuOptions = menuOptions;
     this.#menuOptionsTextGameObjects = [];
     this.#selectedMenuOptionIndex = 0;
+
+    // use provided labels for display, fall back to option keys
+    const displayLabels = menuLabels || menuOptions;
 
     // calculate height based on currently available options
     this.#height = 10 + this.#padding * 2 + this.#availableMenuOptions.length * 50;
@@ -63,7 +67,7 @@ export class Menu {
     // update menu container with menu options
     for (let i = 0; i < this.#availableMenuOptions.length; i += 1) {
       const y = 10 + 50 * i + this.#padding;
-      const textObj = this.#scene.add.text(40 + this.#padding, y, this.#availableMenuOptions[i], MENU_TEXT_STYLE);
+      const textObj = this.#scene.add.text(40 + this.#padding, y, displayLabels[i], MENU_TEXT_STYLE);
       this.#menuOptionsTextGameObjects.push(textObj);
       this.#container.add(textObj);
     }

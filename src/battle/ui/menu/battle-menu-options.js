@@ -4,10 +4,10 @@
 
 /** @enum {BattleMenuOptions} */
 export const BATTLE_MENU_OPTIONS = Object.freeze({
-  FIGHT: 'FIGHT',
-  SWITCH: 'SWITCH',
-  ITEM: 'ITEM',
-  FLEE: 'FLEE',
+  FIGHT: '战斗',
+  SWITCH: '交换',
+  ITEM: '道具',
+  FLEE: '逃跑',
 });
 
 /**

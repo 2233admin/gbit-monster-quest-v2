@@ -17,7 +17,7 @@ import {
   EXP_BAR_ASSET_KEYS,
 } from '../assets/asset-keys.js';
 import { SCENE_KEYS } from './scene-keys.js';
-import { KENNEY_FUTURE_NARROW_FONT_NAME } from '../assets/font-keys.js';
+import { KENNEY_FUTURE_NARROW_FONT_NAME, FUSION_PIXEL_FONT_NAME } from '../assets/font-keys.js';
 import { WebFontFileLoader } from '../assets/web-font-file-loader.js';
 import { DataUtils } from '../utils/data-utils.js';
 import { dataManager } from '../utils/data-manager.js';
@@ -146,7 +146,7 @@ export class PreloadScene extends BaseScene {
     this.load.json(DATA_ASSET_KEYS.GBIT_MONSTERS, 'assets/data/gbit-monsters.json');
 
     // load custom fonts
-    this.load.addFile(new WebFontFileLoader(this.load, [KENNEY_FUTURE_NARROW_FONT_NAME]));
+    this.load.addFile(new WebFontFileLoader(this.load, [KENNEY_FUTURE_NARROW_FONT_NAME, FUSION_PIXEL_FONT_NAME]));
 
     // load attack assets
     this.load.spritesheet(ATTACK_ASSET_KEYS.ICE_SHARD, `${pimenAssetPath}/ice-attack/active.png`, {

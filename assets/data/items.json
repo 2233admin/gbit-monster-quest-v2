@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "name": "potion",
-    "description": "A basic healing item that will heal 30 HP from a single monster.",
+    "name": "药水",
+    "description": "基础治疗道具，可为一只怪兽恢复 30 HP。",
     "category": "HEAL",
     "effect": "HEAL_30"
   },
   {
     "id": 2,
-    "name": "damaged ball",
-    "description": "A damaged ball that can be used for capturing monsters.",
+    "name": "破损捕捉球",
+    "description": "一颗破损的捕捉球，可用于捕获怪兽。",
     "category": "CAPTURE",
     "effect": "CAPTURE_1"
   }

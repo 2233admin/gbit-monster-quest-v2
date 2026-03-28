@@ -166,7 +166,7 @@ export class BattleMenu {
    */
   showMainBattleMenu() {
     this.#activeBattleMenu = ACTIVE_BATTLE_MENU.BATTLE_MAIN;
-    this.#battleTextGameObjectLine1.setText('what should');
+    this.#battleTextGameObjectLine1.setText('接下来');
     this.#mainBattleMenuPhaserContainerGameObject.setAlpha(1);
     this.#battleTextGameObjectLine1.setAlpha(1);
     this.#battleTextGameObjectLine2.setAlpha(1);
@@ -372,7 +372,7 @@ export class BattleMenu {
     this.#battleTextGameObjectLine2 = this.#scene.add.text(
       20,
       512,
-      `${this.#activePlayerMonster.name} do next?`,
+      `${this.#activePlayerMonster.name} 怎么做？`,
       BATTLE_UI_TEXT_STYLE
     );
 
@@ -704,7 +704,7 @@ export class BattleMenu {
 
     if (this.#selectedBattleMenuOption === BATTLE_MENU_OPTIONS.FLEE) {
       if (this.#isTrainerBattle) {
-        this.updateInfoPaneMessagesAndWaitForInput(["You can't flee at this time!"], () => {
+        this.updateInfoPaneMessagesAndWaitForInput(['现在无法逃跑！'], () => {
           this.showMainBattleMenu();
         });
         return;
@@ -787,6 +787,6 @@ export class BattleMenu {
 
     this.#wasItemUsed = true;
     this.#usedItem = data.item;
-    this.updateInfoPaneMessagesAndWaitForInput([`You used the following item: ${data.item.name}`]);
+    this.updateInfoPaneMessagesAndWaitForInput([`使用了道具：${data.item.name}`]);
   }
 }

@@ -14,6 +14,15 @@ export const MONSTER_PARTY_MENU_OPTIONS = Object.freeze({
   CANCEL: 'CANCEL',
 });
 
+/** @type {Object<string, string>} */
+const MONSTER_PARTY_MENU_LABELS = Object.freeze({
+  [MONSTER_PARTY_MENU_OPTIONS.SELECT]: '选择',
+  [MONSTER_PARTY_MENU_OPTIONS.MOVE]: '移动',
+  [MONSTER_PARTY_MENU_OPTIONS.SUMMARY]: '详情',
+  [MONSTER_PARTY_MENU_OPTIONS.RELEASE]: '放生',
+  [MONSTER_PARTY_MENU_OPTIONS.CANCEL]: '取消',
+});
+
 export class MonsterPartyMenu extends Menu {
   /**
    * @param {Phaser.Scene} scene
@@ -30,6 +39,7 @@ export class MonsterPartyMenu extends Menu {
       availableOptions.splice(0, 1, MONSTER_PARTY_MENU_OPTIONS.MOVE);
       availableOptions.splice(2, 0, MONSTER_PARTY_MENU_OPTIONS.RELEASE);
     }
-    super(scene, availableOptions);
+    const availableLabels = availableOptions.map((option) => MONSTER_PARTY_MENU_LABELS[option]);
+    super(scene, availableOptions, availableLabels);
   }
 }
