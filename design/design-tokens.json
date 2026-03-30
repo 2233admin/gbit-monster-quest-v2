@@ -1,0 +1,150 @@
+{
+  "$schema": "design-tokens",
+  "$description": "GBIT Monster Quest v2 — 明日方舟×苏联构成主义 Design Tokens. 在 Figma 里修改值，改完告诉克劳德同志。",
+
+  "canvas": {
+    "width": 1024,
+    "height": 576,
+    "background": "#0a0a0e"
+  },
+
+  "font": {
+    "primary": "Fusion Pixel",
+    "primarySize": "36px",
+    "file": "assets/fonts/fusion-pixel-12px-proportional-zh_hans.ttf",
+    "note": "像素字体，最佳渲染尺寸为12的倍数(24/36/48)"
+  },
+
+  "colors": {
+    "theme1": {
+      "name": "苏联红金 (默认)",
+      "panelFill": "#121218",
+      "panelBorder": "#c02030",
+      "panelShadow": "#080808",
+      "accent": "#e8c44a",
+      "textMain": "#e0dcd0",
+      "textAccent": "#e8c44a"
+    },
+    "theme2": {
+      "name": "军绿",
+      "panelFill": "#101814",
+      "panelBorder": "#c02030",
+      "accent": "#4ae868",
+      "textMain": "#d0dcd4",
+      "textAccent": "#4ae868"
+    },
+    "theme3": {
+      "name": "暗紫",
+      "panelFill": "#14101c",
+      "panelBorder": "#c02030",
+      "accent": "#a868e8",
+      "textMain": "#d8d0e0",
+      "textAccent": "#a868e8"
+    },
+    "battle": {
+      "infoPanelFill": "#0e0e14",
+      "infoPanelBorder": "#c02030",
+      "menuPanelBorder": "#e8c44a",
+      "hpLabel": "#e8c44a",
+      "monsterName": "#e0dcd0",
+      "levelColor": "#c02030",
+      "textColor": "#e0dcd0"
+    },
+    "damage": {
+      "normal": "#FFFFFF",
+      "critical": "#e8c44a",
+      "superEffective": "#ff4444",
+      "notEffective": "#888888"
+    }
+  },
+
+  "panel": {
+    "style": "chamfered (斜切角, 非圆角)",
+    "cutSize": 16,
+    "borderWidth": 2,
+    "shadowOffset": 4,
+    "shadowAlpha": 0.5,
+    "fillAlpha": 0.92,
+    "note": "左上+右下角45度斜切, 右上+左下保持直角"
+  },
+
+  "screens": {
+    "title": {
+      "menuOptions": ["新游戏", "继续", "设置"],
+      "menuPosition": "右上角",
+      "menuWidth": 300
+    },
+    "worldMenu": {
+      "options": ["怪兽", "背包", "保存", "退出"],
+      "position": "右上角",
+      "width": 300
+    },
+    "battle": {
+      "infoPanel": {
+        "position": "底部全宽",
+        "x": 4, "y": 448,
+        "width": 1016, "height": 124
+      },
+      "menuPanel": {
+        "position": "右下角",
+        "x": 520, "y": 448,
+        "width": 500, "height": 124
+      },
+      "options": ["战斗", "交换", "道具", "逃跑"],
+      "layout": "2x2网格",
+      "playerMonsterPos": {"x": 256, "y": 316},
+      "enemyMonsterPos": {"x": 768, "y": 144}
+    },
+    "dialog": {
+      "position": "底部居中",
+      "width": 1100,
+      "height": 124,
+      "padding": 90
+    },
+    "inventory": {
+      "title": "道具",
+      "panelFill": "#121218",
+      "fillAlpha": 0.85
+    },
+    "monsterParty": {
+      "layout": "2列交错, 每行150px间距",
+      "infoBar": "底部867x65"
+    },
+    "options": {
+      "labels": ["文字速度", "战斗动画", "战斗模式", "音效", "音量", "菜单配色", "关闭"],
+      "cursorBorderColor": "#c02030"
+    }
+  },
+
+  "battleMechanics": {
+    "typeChart": "火>草虫冰, 水>火岩, 草>水岩, 电>水, 岩>火虫冰, 虫>草, 冰>草, 妖精>虫",
+    "superEffectiveMultiplier": 2.0,
+    "notEffectiveMultiplier": 0.5,
+    "critRate": 0.1,
+    "critMultiplier": 1.5
+  },
+
+  "effects": {
+    "damageNumber": {
+      "normalSize": 28,
+      "critSize": 38,
+      "notEffectiveSize": 22,
+      "floatDistance": 50,
+      "duration": 800
+    },
+    "cameraShake": {
+      "intensity": 0.008,
+      "duration": 120
+    },
+    "slideIn": {
+      "duration": 150,
+      "ease": "Power3",
+      "offsetX": 60
+    },
+    "cursorPulse": {
+      "scale": 1.15,
+      "duration": 400,
+      "ease": "Stepped(3)"
+    }
+  }
+}
